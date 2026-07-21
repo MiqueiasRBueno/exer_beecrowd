@@ -7,11 +7,9 @@
 # A saída contém um inteiro representando o número de concorrentes que obtiveram a resposta correta.
 
 t = int(input())
-a, b, c, d, e = map(int, input().split())
+a, b, c, d, e = list(map(int, input().split()))
 cont = 0
-if t == a: cont +=1
-if t == b: cont +=1
-if t == c: cont +=1
-if t == d: cont +=1
-if t == e: cont +=1
+for v in [a, b, c, d, e]:
+    if v == t:
+        cont += 1
 print(cont)
