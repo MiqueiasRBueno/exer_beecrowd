@@ -20,4 +20,3 @@ ano, mes , dia = id_dias
 print(f"""{ano} ano(s)
 {mes} mes(es)
 {dia} dia(s)""")
-
