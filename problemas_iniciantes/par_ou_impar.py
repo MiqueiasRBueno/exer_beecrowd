@@ -11,19 +11,20 @@
 # Todas as letras deverão ser maiúsculas e sempre deverá haver um espaço entre duas palavras impressas na mesma linha.
 
 n = int(input())
+saida = []
 for num in range(0, n):
     x = int(input())
-    if x == 0:
-        print("NULL")
-    elif x % 2 == 0:
-        print("EVEN", end=" ")
-        if x > 0:
-            print("POSITIVE")
-        else:
-            print("NEGATIVE")
+    valor = x
+    if valor == 0:
+        saida.append("NULL")
     else:
-        print("ODD", end=" ")
-        if x > 0:
-            print("POSITVE")
+        if valor % 2 ==0 and valor > 0:
+            saida.append("EVEN POSITIVE")
+        elif valor % 2 == 0 and valor < 0:
+            saida.append("EVEN NEGATIVE")
+        elif valor % 2 != 0 and valor > 0:
+            saida.append("ODD POSITIVE")
         else:
-            print("NEGATIVE")
+            saida.append("ODD NEGATIVE")
+for s in saida:
+    print(s)
