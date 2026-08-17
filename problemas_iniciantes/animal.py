@@ -9,6 +9,7 @@
 classificacao_vertebral = str(input())
 classificacao_de_grupo = str(input())
 classificacao_alimentacao = str(input())
+animal = " "
 if classificacao_vertebral == "vertebrado":
     if classificacao_de_grupo == "ave":
         if classificacao_alimentacao == "carnivoro":
