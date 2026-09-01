@@ -4,47 +4,24 @@
 # Saída
 # Imprima a sequencia conforme exemplo abaixo.
 
-for i in range(0, 1):
+# Inicializa a variável 'i' com o valor 0 (ponto de partida do laço)
+i = 0
+
+# Executa o bloco enquanto 'i' for menor ou igual a 20
+while i <= 20:
+
+    # Laço interno: gera valores para 'j' de 1 até 3 (o 4 é exclusivo)
     for j in range(1, 4):
-        print(f"I={i} J={j}")
-        j += 1
-for i in range(0, 1):
-    for j in range(1, 4):
-        print(f"I={i + 0.2} J={j + 0.2}")
-        j += 1
-for i in range(0, 1):
-    for j in range(1, 4):
-        print(f"I={i + 0.4} J={j + 0.4}")
-        j += 1
-for i in range(0, 1):
-    for j in range(1, 4):
-        print(f"I={i + 0.6} J={j + 0.6}")
-        j += 1
-for i in range(0, 1):
-    for j in range(1, 4):
-        print(f"I={i + 0.8} J={j + 0.8}")
-        j += 1
-for i in range(1, 2):
-    for j in range(2, 5):
-        print(f"I={i} J={j}")
-        j += 1
-for i in range(1, 2):
-    for j in range(2, 5):
-        print(f"I={i + 0.2} J={j + 0.2}")
-        j += 1
-for i in range(1, 2):
-    for j in range(2, 5):
-        print(f"I={i + 0.4} J={j + 0.4}")
-        j += 1
-for i in range(1, 2):
-    for j in range(2, 5):
-        print(f"I={i + 0.6} J={j + 0.6}")
-        j += 1
-for i in range(1, 2):
-    for j in range(2, 5):
-        print(f"I={i + 0.8} J={j + 0.8}")
-        j += 1
-for i in range(2, 3):
-    for j in range(3, 6):
-        print(f"I={i} J={j}")
-        j += 1
+
+        # Verifica se 'i' é divisível por 10 (múltiplos como 0, 10 e 20)
+        if i % 10 == 0:
+            # Exibe os números como inteiros (sem casas decimais)
+            print(f'I={int(i / 10)} J={int(j + i / 10)}')
+
+            # Caso 'i' não seja múltiplo de 10 (valores com decimais)
+        else:
+            # Exibe os números como decimais, limitados a 1 casa após a vírgula (:.1f)
+            print(f'I={i / 10:.1f} J={j + i / 10:.1f}')
+
+            # Incrementa 'i' em 2 unidades para avançar no laço 'while'
+    i += 2
