@@ -6,17 +6,16 @@
 # Saída
 # A saída contém apenas um valor inteiro.
 
-# Lê a linha inteira e transforma tudo em uma lista de inteiros
-valores = list(map(int, input().split()))
 
-# O primeiro valor sempre será o A
-A = valores[0]
-
-# Procuramos o primeiro valor positivo a partir do segundo elemento para ser o N
-for valor in valores[1:]:
-    if valor > 0:
-        N = valor
-        break  # Achou o N válido? Para o laço!
-
-# Agora é só fazer a lógica da soma...
-print(N)
+entrada = list(map(int, input().split()))
+valor_A = entrada[0]
+valor_N = 0
+for i in range(1, len(entrada)):
+    if entrada[i] > 0:
+        valor_N = entrada[i]
+        break
+x = soma = valor_A
+for c in range(1, valor_N):
+    x += 1
+    soma += x
+print(soma)
