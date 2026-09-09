@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "problemas_iniciantes"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
