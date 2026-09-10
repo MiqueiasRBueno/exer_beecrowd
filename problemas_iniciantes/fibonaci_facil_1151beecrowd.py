@@ -6,3 +6,11 @@
 # Saída
 # Os valores devem ser mostrados na mesma linha, separados por um espaço em branco.
 # Não deve haver espaço após o último valor.
+
+tamanho_da_fibo = int(input())
+valor_inicial, valor_proximo = 0, 1
+lista_fibo = []
+for seq in range(0, tamanho_da_fibo):
+    lista_fibo.append(str(valor_inicial))
+    valor_inicial, valor_proximo = valor_proximo, valor_inicial + valor_proximo
+print(" ".join(lista_fibo))
