@@ -9,17 +9,15 @@
 # Saída
 # Imprima a soma dos consecutivos números ímpares a partir do valor X.
 
-quantidade_de_casos_N = int(input())
-x = entradas_x = entradas_y = 0
-for entradas in range(0, quantidade_de_casos_N):
-    entradas_x_y = input().split()
-    entradas_x = int(entradas_x_y[0])
-    entradas_y = int(entradas_x_y[1])
-    if entradas_x % 2 == 0: inicio = entradas_x + 1
-    else: inicio = entradas_x
-    soma  = passo = inicio
-    for total in range(1, entradas_y):      
-        passo += 2
-        soma += passo
+numero_testes_N = int(input())
+for _ in range(numero_testes_N):
+    entrada_X, entrada_Y = map(int, input().split())
+    if entrada_X % 2 == 0:
+        inicio = entrada_X + 1
+    else:
+        inicio = entrada_X
+    aux = soma = inicio
+    for c in range(1, entrada_Y):
+        aux += 2
+        soma += aux
     print(soma)
-    
