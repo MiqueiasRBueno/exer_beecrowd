@@ -22,3 +22,4 @@ for entradas in range(0, quantidade_de_casos_N):
         passo += 2
         soma += passo
     print(soma)
+    
